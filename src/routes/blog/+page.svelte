@@ -1,6 +1,7 @@
 <script>
 	export let data;
 	import { formatDate } from '$lib/Utils.js';
+	import images from '$lib/images/';
 
 	function firstP(content) {
 		const match = content.match(/<p>.*?<\/p>/);
@@ -15,8 +16,8 @@
 
 <h1 class="visually-hidden">Un blog accessible de fou</h1>
 <picture>
-	<source media="(min-width: 1000px)" type="image/webp" srcset="/src/lib/images/coffee.webp" />
-	<img aria-hidden="true" class="bg-decorations coffee1" src="/src/lib/images/coffee.png" alt="coffee" />
+	<source media="(min-width: 1000px)" type="image/webp" srcset="{images}/coffee.webp" />
+	<img aria-hidden="true" class="bg-decorations coffee1" src="{images}/coffee.png" alt="coffee" />
 </picture>
 <picture>
 	<source media="(min-width: 1000px)" type="image/webp" srcset="/src/lib/images/coffee2.webp" />
