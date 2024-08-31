@@ -6,7 +6,7 @@
 	--color-bg-1: rgb(250, 250, 248);
 	--color-bg-2: rgb(250, 250, 248);
 	--color-theme-1: #4248f8;
-	--color-theme-2: #4075a6;
+	--color-theme-2: #000000;
 	--color-theme-3: #444444;
 	--color-text: rgba(0, 0, 0, 0.7);
 	--column-width: 42rem;
@@ -69,6 +69,11 @@ h1 {
 
 h2 {
 	font-size: 1rem;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
 }
 
 pre {

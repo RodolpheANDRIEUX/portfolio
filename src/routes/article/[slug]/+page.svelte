@@ -2,6 +2,8 @@
     export let data;
     import { onMount } from 'svelte';
     import { formatDate } from '$lib/Utils.js';
+    import jira from '$lib/images/jira.png'
+    const images = [ jira ]
 
     let button;
     let dialog;
@@ -34,16 +36,12 @@
 
         {#if data.image}
             <dialog>
-                <img src="/src/lib/images/{data.image.imageName}/{data.image.imageName}.webp" alt={data.image.imageAlt}
+                <img src={images[data.image.imageName]} alt={data.image.imageAlt}
                      style="view-transition-name: img{data.id};"/>
             </dialog>
             <button on:click={() => dialog.showModal()} on:keydown={(event) => { if (event.key === 'Enter') dialog.showModal(); }}>
-                <picture>
-                    <source media="(min-width: 540px)" type="image/webp" srcset="/src/lib/images/{data.image.imageName}/{data.image.imageName}-992.webp" />
-                    <source type="image/webp" srcset="/src/lib/images/{data.image.imageName}/{data.image.imageName}-520.webp" />
-                    <img src="/src/lib/images/{data.image.imageName}/{data.image.imageName}.jpg" alt={data.image.imageAlt}
-                         style="view-transition-name: img{data.id};"/> <!-- Fallback -->
-                </picture>
+                <img src={images[data.image.imageName]} alt={data.image.imageAlt}
+                     style="view-transition-name: img{data.id};"/>
             </button>
         {/if}
     </article>

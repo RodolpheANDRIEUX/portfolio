@@ -1,49 +1,52 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/logo.svg';
+	import Menu from "./menu.svelte";
+
+	let tabs = [
+		{ name: 'Home', url: '/' },
+		{ name: 'blog', url: '/blog' },
+		{ name: 'contact', url: '/contact' },
+		{ name: 'about me', url: '/about' }
+	];
 </script>
 
 <header>
-	<div id="logo">
+	<div class="logo">
 		<a href="/">
-			<img src={logo} alt="Blog" />
+			<img src="{logo}" alt="OW" />
 		</a>
 	</div>
 
-	<nav >
-
+	<nav>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/blog' ? 'page' : undefined}>
-				<a href="/blog">Blog</a>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/contact' ? 'page' : undefined}>
-				<a href="/contact">Contact</a>
-			</li>
+			{#each tabs as tab}
+				<li aria-current={$page.url.pathname === tab.url ? 'page' : undefined}>
+					<a href="{tab.url}">{tab.name}</a>
+				</li>
+			{/each}
 		</ul>
 	</nav>
+	<Menu {tabs}/>
 </header>
 
 <style>
 	header {
 		display: flex;
+		z-index: 10;
+		padding: 1em clamp(0em, 2vw, 5em);
 		justify-content: space-between;
-		background: var(--color-theme-3);
-		view-transition-name: header;
+		background-color: var(--color-theme-3);
 	}
 
-	#logo a {
+	.logo a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 100%;
 	}
 
-	#logo img {
+	.logo img {
 		margin-left: 3vw;
 		height: 2.2em;
 		object-fit: contain;
@@ -59,10 +62,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 0 20px 0;
+		padding: 0;
 		margin: 0;
 		height: 3em;
-		list-style: none;
 	}
 
 	li {
@@ -70,16 +72,20 @@
 		height: 100%;
 	}
 
+	li[aria-current='page'] {
+		text-shadow: black 0 3px;
+	}
+
 	li[aria-current='page']::before {
-		--width: 40px;
-		--height: 5px;
 		content: '';
-		width: var(--width);
-		height: var(--height);
+		width: 100px;
+		height: 20px;
+		border-radius: 50px;
 		position: absolute;
-		top: 0;
-		left: calc(50% - var(--width) / 2);
-		background-color: var(--color-theme-1);
+		top: calc(-1em - 15px);
+		left: calc(50% - 50px);
+		background-color: var(--color-bg-1);
+		filter: blur(25px);
 		view-transition-name: indicator;
 	}
 
@@ -87,14 +93,18 @@
 		display: flex;
 		height: 100%;
 		align-items: center;
-		padding: 10px 3em;
-		color: var(--color-bg-0);
+		padding: 0 2em;
+		color: var(--color-bg-2);
 		font-weight: 700;
 		font-size: 1rem;
 		text-transform: uppercase;
 		letter-spacing: .2em;
 		text-decoration: none;
-		transition: color 0.2s linear;
 	}
 
+	@media (max-width: 900px) {
+		ul {
+			display: none;
+		}
+	}
 </style>

@@ -8,8 +8,8 @@ export const posts = [
             "            <p>L'un des aspects les plus marquants de cette expérience a été l'appréhension initiale de la mission. Comprendre les besoins du client, définir les contraintes techniques, et aligner les objectifs de l'équipe ont été des défis que j'ai relevés grâce à la structure fournie par Scrum. J'ai rapidement appris à prioriser les tâches, à communiquer efficacement avec les membres de l'équipe, et à adapter les plans en fonction des retours du client. Cette expérience m'a non seulement permis de maîtriser la méthode Scrum, mais aussi de développer des compétences essentielles en gestion de projet.</p>",
         "image":
             {
-                "imageName": "ApertureScience",
-                "imageAlt": "Aperture Science logo"
+                "imageName": 0,
+                "imageAlt": "Use of Jira"
             },
         "date": "2024-07-01T00:00:00.000Z"
     },

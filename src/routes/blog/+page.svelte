@@ -3,6 +3,10 @@
 	import { formatDate } from '$lib/Utils.js';
 	import coffeeWebp from '$lib/images/coffee.webp';
 	import coffeePng from '$lib/images/coffee.png';
+	import coffe2Webp from '$lib/images/coffee2.webp';
+	import coffe2Png from '$lib/images/coffee2.png';
+	import jira from '$lib/images/jira.png'
+	const images = [ jira ]
 
 	function firstP(content) {
 		const match = content.match(/<p>.*?<\/p>/);
@@ -21,8 +25,8 @@
 	<img aria-hidden="true" class="bg-decorations coffee1" src={coffeePng} alt="coffee" />
 </picture>
 <picture>
-	<source media="(min-width: 1000px)" type="image/webp" srcset="./src/lib/images/coffee2.webp" />
-	<img aria-hidden="true" class="bg-decorations coffee" src="./src/lib/images/coffee2.png" alt="more coffee" />
+	<source media="(min-width: 1000px)" type="image/webp" srcset={coffe2Webp} />
+	<img aria-hidden="true" class="bg-decorations coffee" src={coffe2Png} alt="more coffee" />
 </picture>
 
 <section>
@@ -36,12 +40,8 @@
 					<span>...</span>
 				</div>
 				{#if post.image}
-					<picture>
-						<source media="(min-width: 600vh)" type="image/webp" srcset="/src/lib/images/{post.image.imageName}/{post.image.imageName}-365.webp" />
-						<source type="image/webp" srcset="/src/lib/images/{post.image.imageName}/{post.image.imageName}-520.webp" />
-						<img src="/src/lib/images/{post.image.imageName}/{post.image.imageName}.jpg" alt={post.image.imageAlt}
-						style="view-transition-name: img{post.id};"/> <!-- Fallback -->
-					</picture>
+					<img src={images[post.image.imageName]} alt={post.image.imageAlt}
+						 style="view-transition-name: img{post.id};"/>
 				{/if}
 			</article>
 		</a>
@@ -132,13 +132,10 @@
 		font-weight: 600;
 	}
 
-	picture {
+	article	img {
 		flex: 2;
 		max-height: 250px;
 		overflow: hidden;
-	}
-
-	article	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
