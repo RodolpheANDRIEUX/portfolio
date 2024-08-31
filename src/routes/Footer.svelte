@@ -1,13 +1,14 @@
 <script>
     import ynov from '$lib/images/ynov-logo.png';
+    import ynovwebp from '$lib/images/ynov-logo.webp';
     import github from '$lib/images/github.svg';
     import linkedin from '$lib/images/linkedin.svg';
 </script>
 
 <footer>
     <picture>
-        <source type="image/webp" srcset="/src/lib/images/ynov-logo.webp">
-        <img id="ynov-footer-logo" src='/src/lib/images/ynov-logo.png' alt="Logo d'ynov">
+        <source type="image/webp" srcset={ynovwebp}>
+        <img id="ynov-footer-logo" src={ynov} alt="Logo d'ynov">
     </picture>
     <div id="flex-div">
         <p>© 2024 - Rodolphe ANDRIEUX</p>
