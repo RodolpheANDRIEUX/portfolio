@@ -30,11 +30,7 @@ export const posts = [
             "            <p>Cette approche m'a conduit à définir les User Stories les plus prioritaires, qui ont ensuite été décomposées en tâches spécifiques à intégrer dans les sprints. L'objectif était de livrer un MVP (Minimum Viable Product) au terme de chaque sprint, une version fonctionnelle de l'application qui puisse être testée et validée par le client.</p>\n" +
             "            <p>Le design de l'UI a été réalisé en parallèle, avec une attention particulière portée à la cohérence visuelle, la simplicité de navigation, et l'accessibilité. J'ai utilisé des outils comme Figma pour concevoir les maquettes, que j'ai ensuite partagées avec l'équipe et le client pour validation. Ce processus itératif m'a permis de recueillir des retours rapides et d'ajuster les designs en fonction des besoins.</p>\n" +
             "            <p>L'UX/UI design, combiné à une approche Agile, m'a permis de livrer une application qui non seulement répondait aux exigences fonctionnelles, mais offrait également une expérience utilisateur fluide et agréable.</p>\n",
-        "image":
-            {
-                "imageName": "Cake",
-                "imageAlt": "Cake"
-            },
+
         "date": "2024-07-12T00:00:00.000Z"
     },
     {
@@ -45,11 +41,7 @@ export const posts = [
             "            <p>L'un des défis majeurs de ce projet a été l'intégration des différentes fonctionnalités de manière cohérente et fluide. J'ai travaillé sur des composants réutilisables, optimisé les performances du chargement des pages, et veillé à ce que l'application soit responsive, c'est-à-dire adaptée à tous les types d'appareils, du mobile au desktop.</p>\n" +
             "            <p>Le choix de SvelteKit s'est révélé particulièrement pertinent pour ce projet, grâce à sa simplicité et à ses performances élevées. J'ai également mis en place des tests unitaires pour m'assurer que chaque composant fonctionnait comme prévu, et j'ai participé à des sessions de revue de code pour garantir la qualité du code produit.</p>\n" +
             "            <p>Cette expérience m'a permis de renforcer mes compétences en développement front-end, tout en apprenant à travailler efficacement avec une API back-end, ce qui est essentiel dans le développement d'applications modernes.</p>\n",
-        "image":
-            {
-                "imageName": "CompanionCube",
-                "imageAlt": "Weighted Companion Cube"
-            },
+
         "date": "2024-07-24T00:00:00.000Z"
     },
     {

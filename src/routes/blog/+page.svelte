@@ -46,6 +46,18 @@
 			</article>
 		</a>
 	{/each}
+
+	<a class="article-link" href="https://olympicwarriors.com/">
+		<article aria-labelledby="Realisation du stage">
+			<div role="article">
+				<time datetime="2024-08-26T00:00:00.000Z">{formatDate("2024-08-26T00:00:00.000Z")}</time>
+				<h2 id="final" style="view-transition-name: final;">La réalisation du stage</h2>
+				<p style="view-transition-name: final-content;">Voici le lien vers la réalisation finale de ce stage. Notez que l'ensemble des feature ne sera rendu disponible qu'a la fin du décompte de la page d'acceuil.</p>
+				<span>...</span>
+			</div>
+
+		</article>
+	</a>
 </section>
 
 <style>
