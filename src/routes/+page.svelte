@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Portfolio</title>
 	<meta name="" content="" />
 </svelte:head>
 

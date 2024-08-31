@@ -15,11 +15,11 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
-	<meta name="description" content="Un blog accessible de fou" />
+	<title>Blog de stage</title>
+	<meta name="description" content="Blog de stage B2 YNOV" />
 </svelte:head>
 
-<h1 class="visually-hidden">Un blog accessible de fou</h1>
+<h1 class="visually-hidden">Blog de stage B2 YNOV</h1>
 <picture>
 	<source media="(min-width: 1000px)" type="image/webp" srcset={coffeeWebp} />
 	<img aria-hidden="true" class="bg-decorations coffee1" src={coffeePng} alt="coffee" />
