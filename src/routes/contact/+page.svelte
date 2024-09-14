@@ -33,7 +33,7 @@
 		{#if errorMessage}
 			<p id="errorMessage" in:slide={{ duration: 400 }}>{errorMessage}</p>
 		{/if}
-		<form method="POST" on:submit|preventDefault={validateForm}>
+		<form on:submit|preventDefault={validateForm}>
 			<div class="input-group">
 				<input required bind:value={name} type="text" id="name" name="name" autocomplete="off" />
 				<label for="name">Name</label>
