@@ -1,71 +1,30 @@
 <script>
-	import {fade, slide} from "svelte/transition";
-	import {onMount} from "svelte";
+	import { fade, slide } from "svelte/transition";
 
-	let fields = {
-		'username': '',
-		'mail': '',
-		'password': '',
-		'confirm password': ''
-	};
-
-	function updateValue(fieldKey, value) {
-		fields[fieldKey] = value;
-	}
-
-	let fieldStates = {};
+	let name = '';
+	let mail = '';
+	let message = '';
 	let errorMessage = '';
 
-	async function validateForm(event) {
-
-		for (let key in fields) {
-			if (!fields[key]) {
-				errorMessage = `${key}  is required`;
-				return false;
-			}
+	function validateForm(event) {
+		if (!name || !mail || !message) {
+			errorMessage = 'All fields are required.';
+			return false;
 		}
 
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		if (!emailRegex.test(fields.mail)){
+		if (!emailRegex.test(mail)) {
 			errorMessage = 'The email address is not valid.';
 			return false;
 		}
 
-		if (!fields.mail.includes('@')) {
-			errorMessage = 'The email address is not valid.';
-			return false;
-		}
-
-		const hasUppercase = /[A-Z]/.test(fields.password);
-		const hasLowercase = /[a-z]/.test(fields.password);
-		const hasDigits = /\d/.test(fields.password);
-
-		if (fields.password.length < 8) {
-			errorMessage = 'The password must be at least 8 characters long';
-			return false;
-		}
-
-		if (fields.password !== fields['confirm password']) {
-			errorMessage = 'Passwords do not match.';
-			return false;
-		}
-
-		errorMessage = 'ok fine, you can log in now 😉';
 		return true;
 	}
-
-	function determineInputType(fieldKey) {
-		return fieldKey.includes('password') ? 'password' : 'text';
-	}
-
-	onMount(() => {
-		document.getElementById('username').focus();
-	});
 </script>
 
 <svelte:head>
 	<title>Contact</title>
-	<meta name="description" content="Contact me !" />
+	<meta name="description" content="Contact me!" />
 </svelte:head>
 
 <section>
@@ -75,18 +34,18 @@
 			<p id="errorMessage" in:slide={{ duration: 400 }}>{errorMessage}</p>
 		{/if}
 		<form method="POST" on:submit|preventDefault={validateForm}>
-			{#each Object.keys(fields) as fieldKey}
-				<div class="input-group">
-					<input value={fields[fieldKey]}
-						   on:input={(e) => updateValue(fieldKey, e.target.value)}
-						   class:focus-or-filled={fieldStates[fieldKey]}
-						   on:focus={() => (fieldStates[fieldKey] = true)}
-						   on:blur={() => (fieldStates[fieldKey] = fields[fieldKey] !== "")}
-						   type={determineInputType(fieldKey)}
-						   id={fieldKey} name={fieldKey} autocomplete="off" />
-					<label for={fieldKey}>{fieldKey}</label>
-				</div>
-			{/each}
+			<div class="input-group">
+				<input required bind:value={name} type="text" id="name" name="name" autocomplete="off" />
+				<label for="name">Name</label>
+			</div>
+			<div class="input-group">
+				<input required bind:value={mail} type="text" id="mail" name="mail" autocomplete="off" />
+				<label for="mail">Mail</label>
+			</div>
+			<div class="input-group">
+				<textarea required bind:value={message} id="message" name="message" autocomplete="off"></textarea>
+				<label for="message">Message</label>
+			</div>
 			<button type="submit" in:slide={{ delay: 500, duration: 200 }}>Submit</button>
 		</form>
 	</div>
@@ -138,9 +97,8 @@
 		color: var(--color-theme-1);
 	}
 
-	input {
+	input, textarea {
 		width: 20rem;
-		max-width: 60vw;
 		color: var(--color-theme-3);
 		border: solid 2px #9e9e9e;
 		background: none;
@@ -148,6 +106,12 @@
 		font-size: 1rem;
 		letter-spacing: .1rem;
 		transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	textarea {
+		height: 10rem;
+		resize: none;
+		letter-spacing: 0;
 	}
 
 	label {
@@ -160,12 +124,15 @@
 		transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	.focus-or-filled {
+	input:focus, input:valid, textarea:focus, textarea:valid {
 		outline: none;
 		border: 2px solid var(--color-theme-1);
 	}
 
-	.focus-or-filled ~ label {
+	.input-group input:focus ~ label,
+	.input-group input:valid ~ label,
+	.input-group textarea:focus ~ label,
+	.input-group textarea:valid ~ label {
 		transform: translateY(-50%) scale(0.8);
 		background-color: #f0f0f0;
 		padding: 0 .2em;
