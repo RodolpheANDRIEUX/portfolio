@@ -18,7 +18,7 @@
 			return false;
 		}
 
-		return true;
+		errorMessage = 'Message sent!';
 	}
 </script>
 
@@ -39,7 +39,7 @@
 				<label for="name">Name</label>
 			</div>
 			<div class="input-group">
-				<input required bind:value={mail} type="text" id="mail" name="mail" autocomplete="off" />
+				<input required bind:value={mail} type="text" id="mail" name="mail"/>
 				<label for="mail">Mail</label>
 			</div>
 			<div class="input-group">
