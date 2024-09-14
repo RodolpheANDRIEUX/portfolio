@@ -15,7 +15,7 @@
 <main>
 	<article>
 		<h2>Profil Professionnel</h2>
-		<p>Fort de plus de 5 ans d'expérience professionnelle, je combine une expertise technique en développement full stack avec des compétences avancées en gestion d'équipe, acquises dans des environnements exigeants, notamment au sein de l'Armée de l'Air et de l'Espace française. Actuellement étudiant à YNOV Toulouse, je suis passionné par l'innovation en informatique, le développement personnel et la gestion de projet[1].</p>
+		<p>Fort de plus de 5 ans d'expérience professionnelle, je combine une expertise technique en développement full stack avec des compétences avancées en gestion d'équipe, acquises dans des environnements exigeants, notamment au sein de l'Armée de l'Air et de l'Espace française. Actuellement étudiant à YNOV Toulouse, je suis passionné par l'innovation en informatique, le développement personnel et la gestion de projet.</p>
 	</article>
 
 	<article>
@@ -33,7 +33,7 @@
 </main>
 
 <footer>
-	<p>N'hésitez pas à me contacter pour discuter d'opportunités d'alternance ou de stage. Je suis impatient de mettre mes compétences au service de projets innovants et de continuer à grandir professionnellement[1].</p>
+	<p>N'hésitez pas à me contacter pour discuter d'opportunités d'alternance ou de stage. Je suis impatient de mettre mes compétences au service de projets innovants et de continuer à grandir professionnellement.</p>
 </footer>
 
 
