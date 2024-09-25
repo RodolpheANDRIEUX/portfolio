@@ -198,6 +198,8 @@
 </script>
 
 
+<h2>Ca marche pas sur tel sorry</h2>
+
 {#if questionVisible}
     <span class="question" transition:fly={{ y: -50, duration: 300, easing: cubicOut }}>{question}</span>
 {/if}
@@ -309,5 +311,21 @@
         left: 50%;
         font-size: 2rem;
         font-weight: 600;
+    }
+
+    h2 {
+        display: none;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 767px) {
+        * {
+            display: none;
+        }
+
+        h2 {
+            display: block;
+        }
     }
 </style>
