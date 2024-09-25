@@ -67,15 +67,6 @@
                     ctx.stroke();
                 }
             }
-
-            let distMouse = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-            if (distMouse < 200) {
-                ctx.beginPath();
-                ctx.moveTo(p.x, p.y);
-                ctx.lineTo(mouse.x, mouse.y);
-                ctx.strokeStyle = `rgba(100, 100, 100, ${1 - distMouse / 200})`;
-                ctx.stroke();
-            }
         }
 
         requestAnimationFrame(animate);

@@ -1,10 +1,12 @@
 <script>
     import noise from '$lib/images/crafts/noise.webp';
     import cube from '$lib/images/crafts/cube.png';
+    import reigns from '$lib/images/crafts/reigns.png';
 
     let crafts = [
+        { name: '3D cube', url: '/crafts/cube', img: cube },
         { name: 'Noise CSS filter', url: '/crafts/noise', img: noise },
-        { name: '3D cube', url: '/crafts/cube', img: cube }
+        { name: 'Reigns card animation', url: '/crafts/reigns-card', img: reigns },
     ]
 </script>
 
@@ -38,9 +40,9 @@
         transition: .3s;
         display: flex;
         flex-direction: column;
-        /* make sure the card stays in one piece */
         break-inside: avoid;
         overflow: hidden;
+        margin-bottom: 10px;
     }
 
     .card p {

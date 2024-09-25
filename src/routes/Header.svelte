@@ -103,7 +103,7 @@
 		text-decoration: none;
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1100px) {
 		ul {
 			display: none;
 		}
