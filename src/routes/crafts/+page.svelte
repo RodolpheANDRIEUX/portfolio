@@ -1,8 +1,10 @@
 <script>
     import noise from '$lib/images/crafts/noise.webp';
+    import cube from '$lib/images/crafts/cube.png';
 
     let crafts = [
-        { name: 'Noise CSS filter', url: '/crafts/noise', img: noise }
+        { name: 'Noise CSS filter', url: '/crafts/noise', img: noise },
+        { name: '3D cube', url: '/crafts/cube', img: cube }
     ]
 </script>
 

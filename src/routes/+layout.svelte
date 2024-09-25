@@ -4,6 +4,12 @@
 	import Canvas from './canvas.svelte';
 	import './styles.css';
 	import { onNavigate } from "$app/navigation";
+	import { fade } from "svelte/transition";
+	import {quadInOut, quintOut} from "svelte/easing";
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => ready = true);
 
 	onNavigate(() => {
 		if (!document.startViewTransition) return;
@@ -14,16 +20,18 @@
 	});
 </script>
 
-<div class="app">
-	<Header />
+{#if ready}
+	<div class="app" transition:fade={{ delay: 200, duration: 1000, easing: quadInOut  }}>
+		<Header />
 
-	<main>
-		<Canvas />
-		<slot />
-	</main>
+		<main transition:fade={{ delay: 1200, duration: 1000, easing: quadInOut }}>
+			<Canvas />
+			<slot />
+		</main>
 
-	<Footer />
-</div>
+		<Footer />
+	</div>
+{/if}
 
 <style>
 	.app {
