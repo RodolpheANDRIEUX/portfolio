@@ -2,22 +2,22 @@
     <div class="tech1">
         <p>
             ::after &#123;<br>
-            <dd>content: "";<br>
+            content: "";<br>
             position: absolute;<br>
             background: url("./noise.svg") repeat;<br>
             opacity: .4;<br>
-            <dt>&#125;
+            &#125;
         </p>
     </div>
     <div class="tech2">
         <p>
             ::after &#123;<br>
-            <dd>content: "";<br>
+            content: "";<br>
                 position: absolute;<br>
                 background: url("./noise.svg") repeat;<br>
                 opacity: .4;<br>
                 filter: blur(0.5px);<br>
-            <dt>&#125;
+            &#125;
         </p>
     </div>
     <div>
@@ -28,21 +28,21 @@
     <div class="tech3">
         <p>
             ::after &#123;<br>
-            <dd>content: "";<br>
+            content: "";<br>
                 position: absolute;<br>
                 background: url("./noise.svg") repeat;<br>
                 mix-blend-mode: multiply;<br>
-            <dt>&#125;
+            &#125;
         </p>
     </div>
     <div class="tech4">
         <p>
             ::after &#123;<br>
-            <dd>content: "";<br>
+            content: "";<br>
                 position: absolute;<br>
                 background: url("./noise.svg") repeat;<br>
                 mix-blend-mode: overlay;<br>
-            <dt>&#125;
+            &#125;
         </p>
     </div>
 </section>
