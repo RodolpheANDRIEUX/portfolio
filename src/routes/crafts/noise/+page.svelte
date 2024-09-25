@@ -1,3 +1,8 @@
+<svelte:head>
+    <title>Noise</title>
+    <meta name="" content="Experimenting with different methods to apply noise to a div" />
+</svelte:head>
+
 <section>
     <div class="tech1">
         <p>

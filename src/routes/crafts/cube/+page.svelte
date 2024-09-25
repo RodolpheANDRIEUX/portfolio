@@ -1,3 +1,8 @@
+<svelte:head>
+    <title>Cube</title>
+    <meta name="" content="" />
+</svelte:head>
+
 <div class="cube-container">
     <div class="cube">
         <div class="face front">Hello</div>

@@ -197,6 +197,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>Reigns card CSS</title>
+    <meta name="" content="Reproduced reigns card animation using CSS and JS" />
+</svelte:head>
 
 <h2>Ca marche pas sur tel sorry</h2>
 

@@ -1,5 +1,12 @@
 <script>
+	import { fade } from 'svelte/transition';
+	import {quadInOut} from "svelte/easing";
+	import {onMount} from 'svelte';
 
+	let display = false;
+	onMount(() => {
+		display = true;
+	});
 </script>
 
 <svelte:head>
@@ -7,10 +14,12 @@
 	<meta name="" content="" />
 </svelte:head>
 
-<div class="title">
+{#if display}
+<div class="title" transition:fade={{ delay: 800, duration: 1000, easing: quadInOut }}>
 	<h1>Hi, I'm Rodolphe ANDRIEUX </h1>
 	<span>👋</span>
 </div>
+{/if}
 
 <style>
 	.title {
