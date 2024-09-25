@@ -1,4 +1,7 @@
 <script>
+    import { fly } from 'svelte/transition';
+    import {quadOut} from "svelte/easing";
+
     import noise from '$lib/images/crafts/noise.webp';
     import cube from '$lib/images/crafts/cube.png';
     import reigns from '$lib/images/crafts/reigns.png';
@@ -11,8 +14,13 @@
 </script>
 
 <section>
-    {#each crafts as craft}
-        <a href={craft.url} class="card">
+    {#each crafts as craft, i}
+        <a href={craft.url} class="card" in:fly|global={{
+            delay: 100 * i,
+            duration: 300,
+            easing: quadOut,
+            y: 50,
+            }}>
             <img src={craft.img} alt={craft.name} />
             <p>{craft.name}</p>
         </a>
