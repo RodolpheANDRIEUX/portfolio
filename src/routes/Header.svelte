@@ -49,7 +49,7 @@
 
 	.logo img {
 		margin-left: 3vw;
-		height: 2.2em;
+		height: 3.2em;
 		object-fit: contain;
 	}
 
