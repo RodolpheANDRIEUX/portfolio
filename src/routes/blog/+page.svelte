@@ -31,7 +31,7 @@
 
 <section>
 	{#each data.posts as post}
-		<a class="article-link" href="/article/{post.id}">
+		<a class="article-link" href="/blog/article/{post.id}">
 			<article aria-labelledby="title-{post.id}">
 				<div role="article">
 					<time datetime={post.date}>{formatDate(post.date)}</time>
