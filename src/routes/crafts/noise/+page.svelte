@@ -9,7 +9,7 @@
             ::after &#123;<br>
             content: "";<br>
             position: absolute;<br>
-            background: url("./noise.svg") repeat;<br>
+            background: url("/craft/noise/noise.svg") repeat;<br>
             opacity: .4;<br>
             &#125;
         </p>
@@ -19,7 +19,7 @@
             ::after &#123;<br>
             content: "";<br>
                 position: absolute;<br>
-                background: url("./noise.svg") repeat;<br>
+                background: url("/craft/noise/noise.svg") repeat;<br>
                 opacity: .4;<br>
                 filter: blur(0.5px);<br>
             &#125;
@@ -35,7 +35,7 @@
             ::after &#123;<br>
             content: "";<br>
                 position: absolute;<br>
-                background: url("./noise.svg") repeat;<br>
+                background: url("/craft/noise/noise.svg") repeat;<br>
                 mix-blend-mode: multiply;<br>
             &#125;
         </p>
@@ -45,7 +45,7 @@
             ::after &#123;<br>
             content: "";<br>
                 position: absolute;<br>
-                background: url("./noise.svg") repeat;<br>
+                background: url("/craft/noise/noise.svg") repeat;<br>
                 mix-blend-mode: overlay;<br>
             &#125;
         </p>
@@ -66,7 +66,7 @@
     }
 
     div {
-        background: url("./photo.jpg") no-repeat center left;
+        background: url("/crafts/noise/photo.jpg") no-repeat center left;
         background-size: cover;
         height: 100%;
         width: 100%;
@@ -86,7 +86,7 @@
         left: 0;
         width: 20%;
         height: 100%;
-        background: url("./noise.svg") repeat;
+        background: url("/crafts/noise/noise.svg") repeat;
         opacity: .4;
     }
 
@@ -97,7 +97,7 @@
         left: 20%;
         width: 20%;
         height: 100%;
-        background: url("./noise.svg") repeat;
+        background: url("/crafts/noise/noise.svg") repeat;
         opacity: .4;
         filter: blur(0.5px);
     }
@@ -109,7 +109,7 @@
         left: 60%;
         width: 20%;
         height: 100%;
-        background: url("./noise.svg") repeat;
+        background: url("/crafts/noise/noise.svg") repeat;
         mix-blend-mode: multiply;
     }
 
@@ -120,7 +120,7 @@
         left: 80%;
         width: 20%;
         height: 100%;
-        background: url("./noise.svg") repeat;
+        background: url("/crafts/noise/noise.svg") repeat;
         mix-blend-mode: overlay;
     }
 

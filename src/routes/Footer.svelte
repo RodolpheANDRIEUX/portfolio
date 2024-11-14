@@ -1,23 +1,16 @@
-<script>
-    import ynov from '$lib/images/ynov-logo.png';
-    import ynovwebp from '$lib/images/ynov-logo.webp';
-    import github from '$lib/images/github.svg';
-    import linkedin from '$lib/images/linkedin.svg';
-</script>
-
 <footer>
     <picture>
-        <source type="image/webp" srcset={ynovwebp}>
-        <img id="ynov-footer-logo" src={ynov} alt="Logo d'ynov">
+        <source type="image/webp" srcset='/ynov-logo.webp'>
+        <img id="ynov-footer-logo" src='/ynov-logo.png' alt="Logo d'ynov">
     </picture>
     <div id="flex-div">
         <p>© 2024 - Rodolphe ANDRIEUX</p>
         <div id="flex-icons">
             <a href="https://www.linkedin.com/in/rodolphe-andrieux" target="_blank">
-                <img src={linkedin} alt="Logo LinkedIn" width="40" height="40">
+                <img src='/linkedin.svg' alt="Logo LinkedIn" width="40" height="40">
             </a>
             <a href="https://github.com/RodolpheANDRIEUX" target="_blank">
-                <img src={github} alt="Logo GitHub" width="40" height="40">
+                <img src='/github.svg' alt="Logo GitHub" width="40" height="40">
             </a>
         </div>
     </div>

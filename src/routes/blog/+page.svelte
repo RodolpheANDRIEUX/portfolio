@@ -1,12 +1,6 @@
 <script>
 	export let data;
 	import { formatDate } from '$lib/Utils.js';
-	import coffeeWebp from '$lib/images/coffee.webp';
-	import coffeePng from '$lib/images/coffee.png';
-	import coffe2Webp from '$lib/images/coffee2.webp';
-	import coffe2Png from '$lib/images/coffee2.png';
-	import jira from '$lib/images/jira.png'
-	const images = [ jira ]
 
 	function firstP(content) {
 		const match = content.match(/<p>.*?<\/p>/);
@@ -21,12 +15,12 @@
 
 <h1 class="visually-hidden">Blog de stage B2 YNOV</h1>
 <picture>
-	<source media="(min-width: 1000px)" type="image/webp" srcset={coffeeWebp} />
-	<img aria-hidden="true" class="bg-decorations coffee1" src={coffeePng} alt="coffee" />
+	<source media="(min-width: 1000px)" type="image/webp" srcset='/coffee.webp' />
+	<img aria-hidden="true" class="bg-decorations coffee1" src='/coffee.png' alt="coffee" />
 </picture>
 <picture>
-	<source media="(min-width: 1000px)" type="image/webp" srcset={coffe2Webp} />
-	<img aria-hidden="true" class="bg-decorations coffee" src={coffe2Png} alt="more coffee" />
+	<source media="(min-width: 1000px)" type="image/webp" srcset='/coffee2.webp' />
+	<img aria-hidden="true" class="bg-decorations coffee" src='/coffee2.png' alt="more coffee" />
 </picture>
 
 <section>
@@ -40,7 +34,7 @@
 					<span>...</span>
 				</div>
 				{#if post.image}
-					<img src={images[post.image.imageName]} alt={post.image.imageAlt}
+					<img src={post.image.imageName} alt={post.image.imageAlt}
 						 style="view-transition-name: img{post.id};"/>
 				{/if}
 			</article>

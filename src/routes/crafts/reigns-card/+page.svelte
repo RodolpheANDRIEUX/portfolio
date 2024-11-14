@@ -2,7 +2,6 @@
     import {fade, fly} from 'svelte/transition';
     import {onMount} from 'svelte';
     import {cubicOut} from "svelte/easing";
-    import king from "./king.png"
 
     let option = '';
     let question = "Where do you want to go ?";
@@ -214,7 +213,7 @@
     <div id="outer-card">
         <div class="card" id="cardFrame" style="transform: translate({currentTranslateX}%, {currentTranslateY}px) rotate({-rotation}deg) rotateY({Yrotation}deg) rotateX({Xrotation}deg);">
             <div id="front">
-                <div id="face" style="background-image: url({king});">
+                <div id="face" style="background-image: url('/crafts/reigns-card/king.png');">
                     {#if !isAnimating}
                         <div id="answerOverlay" transition:fade={{ duration: 200 }}
                              style="transform: translate(-25%, {-100 + (Math.abs(rotation * 3))}%) rotate({rotation}deg);">
@@ -284,7 +283,7 @@
 
     .backCard {
         background-size: 50%;
-        background: var(--color-bg-0) url("./card.svg") no-repeat center;
+        background: var(--color-bg-0) url("/crafts/reigns-card/card.svg") no-repeat center;
         border-radius: 3vh;
         box-shadow: inset 0 0 0 8px #13131380;
     }

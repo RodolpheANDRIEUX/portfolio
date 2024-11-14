@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/logo.svg';
 	import Menu from "./menu.svelte";
 
 	let tabs = [
@@ -15,7 +14,7 @@
 <header>
 	<div class="logo">
 		<a href="/">
-			<img src="{logo}" alt="OW" />
+			<img src='/logo.svg' alt="OW" />
 		</a>
 	</div>
 
